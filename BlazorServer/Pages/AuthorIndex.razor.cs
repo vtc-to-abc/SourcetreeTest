@@ -10,7 +10,7 @@ namespace BlazorServer.Pages
 {
     public partial class AuthorIndex: ComponentBase
     {
-        [Inject] private IAuthorData _db { get; set; }
+        [Inject] private IAuthorData AuthorDB { get; set; }
         [Parameter] public int TestComponentParemeter { get; set; }
      private List<AuthorModel> authors = new List<AuthorModel>();
 
@@ -27,9 +27,9 @@ namespace BlazorServer.Pages
                 author_id = 1,
             };
             if (TestComponentParemeter == 1)
-                return await _db.SearchAuthor(detailtest);
+                return await AuthorDB.SearchAuthor(detailtest);
             else
-                return await _db.GetAuthor();
+                return await AuthorDB.GetAuthor();
         }
         public async Task InsertNewAuthor()
         {
@@ -37,7 +37,7 @@ namespace BlazorServer.Pages
             {
                 pseudonym = "test insert"
             };
-            await _db.InsertAuthor(insertest);
+            await AuthorDB.InsertAuthor(insertest);
         }
 
         public async Task EditAuthorInformation()
@@ -47,11 +47,11 @@ namespace BlazorServer.Pages
                 author_id = 1,
                 pseudonym = "test edit"
             };
-            await _db.EditAuthor(edittest);
+            await AuthorDB.EditAuthor(edittest);
         }
         public async Task DeleteAuthor(AuthorModel author )
         {
-            await _db.Delete(author);
+            await AuthorDB.Delete(author);
         }
     }
 }
