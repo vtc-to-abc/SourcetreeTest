@@ -19,7 +19,7 @@ namespace BlazorClient.Pages.Book
 
         private BookModel CurrentBook;
         private IEnumerable<AuthorModel> CurrentBookRelationalAuthors { get; set; } = new List<AuthorModel>();
-
+        string testMergeConflict2 = "yes";
 
         public async Task GetCurrrentBook(BookModel book)
         {
