@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using DataAccessLibary.Models;
 namespace DataAccessLibary
 {
-    public interface IAuthorBookBookData
+    public interface IAuthorBookData
     {
         Task<List<AuthorBookModel>> GetAuthorBook();
         Task InsertAuthorBook(AuthorBookModel auth);
         Task Delete(AuthorBookModel auth);
     }
-    public class AuthorBookData : IAuthorBookBookData
+    public class AuthorBookData : IAuthorBookData
     {
         private readonly ISqlDataAccess _db;
         public AuthorBookData(ISqlDataAccess db)

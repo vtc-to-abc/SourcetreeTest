@@ -10,8 +10,7 @@
         "dependencies": {
           "Dapper": "2.0.123",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
-          "System.Data.SqlClient": "4.8.3",
-          "TelerikMvcExtensions": "2013.1.219"
+          "System.Data.SqlClient": "4.8.3"
         },
         "runtime": {
           "DataAccessLibary.dll": {}
@@ -122,15 +121,7 @@
           "System.Security.Principal.Windows": "4.7.0"
         }
       },
-      "System.Security.Principal.Windows/4.7.0": {},
-      "TelerikMvcExtensions/2013.1.219": {
-        "runtime": {
-          "lib/net40/Telerik.Web.Mvc.dll": {
-            "assemblyVersion": "2013.1.219.340",
-            "fileVersion": "2013.1.219.340"
-          }
-        }
-      }
+      "System.Security.Principal.Windows/4.7.0": {}
     }
   },
   "libraries": {
@@ -229,13 +220,6 @@
       "sha512": "sha512-ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
-    },
-    "TelerikMvcExtensions/2013.1.219": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-bDqxWrQqIalHwa2mxG8zkT5AQS9AR9nD9hnGKRvK643A8GgZYOR9klGia7fLMieI3RM3ZhMJZzirkbBotTb6lA==",
-      "path": "telerikmvcextensions/2013.1.219",
-      "hashPath": "telerikmvcextensions.2013.1.219.nupkg.sha512"
     }
   }
 }

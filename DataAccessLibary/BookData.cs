@@ -32,7 +32,7 @@ namespace DataAccessLibary
         {
             string sqlquery = @"update dbo.book 
                                 set book_title = @book_title,
-                                    store_copies = @store_copies,
+                                    stored_copies = @stored_copies,
                                     current_rent = @current_rent
                                 where book_id = @book_id";
 
@@ -47,8 +47,8 @@ namespace DataAccessLibary
 
         public Task InsertBook(BookModel book)
         {
-            string sqlquery = @"insert into dbo.book values(book_title, store_copies, current_rent) 
-                                values(@book_title, @store_copies, @current_rent)";
+            string sqlquery = @"insert into dbo.book(book_title, stored_copies, current_rent) 
+                                values(@book_title, @stored_copies, @current_rent)";
 
             return _db.SaveData(sqlquery, book);
         }
